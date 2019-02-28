@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddEditCowActivity">
+
+    <ImageView
+        android:id="@+id/cowImg"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:contentDescription="@string/cow_image"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/img_cow_basic"
+        tools:srcCompat="@drawable/img_cow_basic" />
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableStart="@drawable/ic_name_drawableleft"
+        android:hint="@string/name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edit_text_color"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableStart="@drawable/ic_color_lens_black_24dp"
+        android:hint="@string/color"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_text_dob"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableStart="@drawable/ic_date_range_black_24dp"
+        android:hint="@string/date_of_birth"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/edit_text_birthweight"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableStart="@drawable/ic_pets_black_24dp"
+        android:hint="@string/birth_weight"
+        android:inputType="numberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radFemaleButton"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableEnd="@drawable/ic_wc_black_24dp"
+            android:text="@string/female" />
+
+        <RadioButton
+            android:id="@+id/radMaleButton"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableEnd="@drawable/ic_wc_black_24dp_green"
+            android:text="@string/male" />
+    </RadioGroup>
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/takePictureButton"
+        style="@style/Base.Widget.AppCompat.ActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="takePictureButtonClicked"
+        android:scaleType="fitEnd"
+        android:tint="@android:color/holo_orange_dark"
+        app:srcCompat="@drawable/ic_add_a_photo"
+        tools:src="@drawable/ic_add_a_photo" />
+
+</LinearLayout>
